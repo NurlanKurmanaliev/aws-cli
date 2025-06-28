@@ -19,3 +19,4 @@ rt_id=$(aws ec2 create-route-table --vpc-id  $vpc_id --region $region --query Ro
 aws ec2 create-route --route-table-id $rt_id --destination-cidr-block 0.0.0.0/0 --gateway-id $igw_id --region $region
 
 aws ec2 associate-route-table --subnet-id $subnet1_id --route-table-id $rt_id --region $region
+
